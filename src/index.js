@@ -8,6 +8,7 @@ import registerServiceWorker from './registerServiceWorker'
 import App from 'components/App'
 import rootReducer from 'reducers/root'
 
+import './reset.css'
 import './index.css'
 
 let store = createStore(
