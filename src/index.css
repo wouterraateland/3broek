@@ -49,6 +49,10 @@ a {
 	margin: auto;
 }
 
+.wrapper.small {
+	max-width: 42rem;
+}
+
 .row::after {
 	content: '';
 	display: block;

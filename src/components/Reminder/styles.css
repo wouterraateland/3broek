@@ -1,0 +1,13 @@
+.Reminder {
+  position: relative;
+}
+
+.Reminder input,
+.Reminder button {
+  margin-bottom: 1em;
+}
+
+.Reminder input {
+  width: 20em;
+  margin-right: 2em;
+}

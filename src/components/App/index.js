@@ -1,15 +1,15 @@
 import React from 'react'
 import './styles.css'
 
-import Background from 'components/Background'
-import Nav from 'components/Nav'
-import Sales from 'components/Sales'
+import Header from 'components/Header'
+import Preview from 'components/Preview'
+import Reminder from 'components/Reminder'
 
 const App = () => (
   <div className="App">
-    <Background />
-    <Nav />
-    <Sales />
+    <Header />
+    <Preview />
+    <Reminder />
   </div>
 )
 
