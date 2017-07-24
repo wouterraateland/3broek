@@ -5,4 +5,7 @@
   height: 100vh;
 
   color: #000;
+
+  background: url(../../media/background.jpg) no-repeat center;
+  background-size: cover;
 }
