@@ -1,21 +1,9 @@
-@font-face {
-	font-family: 'High Tide';
-	src: url('./media/High-Tide_Sans.otf') format('opentype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'High Tide';
-	src: url('./media/High-Tide_Bold.otf') format('opentype');
-	font-weight: bold;
-	font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,700');
 
 body {
-	font-family: 'High Tide', sans-serif;
+	font-family: 'Quicksand', sans-serif;
 
-	background: #fff;
+	background: #fefdfb;
 	color: hsl(224, 52%, 26%);
 }
 
@@ -44,8 +32,8 @@ a {
 .wrapper {
 	width: 100%;
 	max-width: 67.5rem;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+	padding-left: .5rem;
+	padding-right: .5rem;
 	margin: auto;
 }
 
@@ -73,7 +61,7 @@ a {
 	float: left;
 	box-sizing: border-box;
 	min-height: 1px;
-	padding: 0 1rem;
+	padding: 0 .5rem;
 
 	&.nopadding {
 		padding: 0;
@@ -166,48 +154,4 @@ a {
 	}
 
 	.hidden-s { display: none; }
-}
-
-/* Forms */
-input {
-	padding: 1em 0 .75em;
-	border: none;
-	border-bottom: .25em solid;
-}
-
-button {
-  appearance: none;
-  position: relative;
-
-	padding: 1em;
-  border: none;
-
-  background: none;
-  color: #fff;
-
-	transition: color .2s;
-}
-
-button::after {
-  content: '';
-
-  position: absolute;
-  left: 0; top: 0;
-  right: 0; bottom: 0;
-  z-index: -1;
-
-	border: .25em solid #000;
-  background-color: #000;
-
-	transition: background-color .2s;
-
-	transform: skewX(-30deg);
-}
-
-button:hover {
-	color: #000;
-}
-
-button:hover::after {
-	background-color: #fff;
 }
