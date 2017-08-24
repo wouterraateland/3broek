@@ -19,8 +19,12 @@ const Bag = ({ open, empty, total, onCheckoutClick }) => (
     </div>
     <div className="Bag-footer">
       <p className="row">
+        <span className="alignleft">Shipping</span>
+        <strong className="alignright">Free</strong>
+      </p>
+      <p className="row">
         <span className="alignleft">Total cost</span>
-        <span className="alignright">&euro;{total}</span>
+        <strong className="alignright">&euro;{total}</strong>
       </p>
       <Button onClick={onCheckoutClick} className="row" text="Checkout" disabled={empty} />
     </div>

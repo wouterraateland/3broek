@@ -12,7 +12,7 @@ import './styles.css'
 
 const Product = ({ product: { backgroundColor, color, name, image, price }, onButtonClick }) => (
   <Link
-    to={`/product/${name}`}
+    to={`/product/${name.replace(/ /g, '').toLowerCase()}`}
     className="Product"
     style={{ backgroundColor, color }}>
     <span className="Product-title">{name}</span>

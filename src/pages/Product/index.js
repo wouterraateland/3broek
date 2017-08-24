@@ -1,12 +1,22 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import './styles.css'
 
-const Product = ({product}) => (
-  <p>product</p>
+import { getProductByURL } from 'selectors/products'
+
+const Product = ({ product: { backgroundColor, color, image, name, price } }) => (
+  <div className="ProductPage">
+    <div className="ProductPage-header" style={{ backgroundColor }}>
+      <img src={image} />
+    </div>
+    <div className="ProductPage-body">
+      <h2>{name}</h2>
+    </div>
+  </div>
 )
 
 const mapStateToProps = (state, props) => ({
-  product: props.product
+  product: getProductByURL(state, props)
 })
 
 export default connect(

@@ -1,0 +1,21 @@
+.ProductPage {
+  position: fixed;
+  left: 0; top: 0;
+  right: 0; bottom: 0;
+  z-index: 1;
+
+  background: #fefdfb;
+}
+
+.ProductPage-header {
+  height: 100vmin;
+  max-height: 44em;
+}
+
+.ProductPage-header img {
+  display: block;
+  padding: 8em 4em 4em;
+  margin: auto;
+}
+
+.ProductPage-body {}

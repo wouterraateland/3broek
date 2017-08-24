@@ -6,9 +6,7 @@
 
   width: 32em;
   max-width: 100vw;
-
-  box-shadow: 1em 0 1em 1em rgba(0, 0, 0, .2);
-
+  
   background: #fff;
 
   transition: right .4s;
@@ -27,12 +25,12 @@
   overflow-x: hidden;
   overflow-y: auto;
 
-  height: calc(100vh - 16em);
+  height: calc(100vh - 17em);
   padding: 3em;
 }
 
 .Bag-footer {
-  height: 12em;
+  height: 13em;
   padding: 3em;
 }
 
