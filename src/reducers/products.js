@@ -6,28 +6,32 @@ import white from 'media/pants/white.png'
 const initialState = {
   byId: {
     0: {
-      name: 'White bear',
+      id: 0,
+      name: 'White Bear',
       image: white,
       backgroundColor: '#f2f6f8',
       color: '#000',
       price: 29,
     },
     1: {
-      name: 'Forest fox',
+      id: 1,
+      name: 'Forest Fox',
       image: khaki,
       backgroundColor: '#dfe0da',
       color: '#fff',
       price: 29,
     },
     2: {
-      name: 'Desert eagle',
+      id: 2,
+      name: 'Desert Eagle',
       image: beige,
       backgroundColor: '#fbf7ea',
       color: '#000',
       price: 29,
     },
     3: {
-      name: 'Black swan',
+      id: 3,
+      name: 'Black Swan',
       image: black,
       backgroundColor: '#6b5861',
       color: '#fff',

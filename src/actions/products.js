@@ -1,6 +1,6 @@
-export const addToBag = (productId) => ({
+export const addToBag = (productId, amount=1) => ({
   type: 'ADD_TO_BAG',
-  productId
+  productId, amount
 })
 
 export const removeFromBag = (productId) => ({

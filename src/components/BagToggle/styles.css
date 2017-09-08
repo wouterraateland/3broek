@@ -1,0 +1,39 @@
+.BagToggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 3.5em 1em;
+
+  font-weight: bold;
+
+  transition: padding .4s;
+}
+
+.BagToggle-img {
+  height: 3em;
+  margin: -1em 0 -1em 1em;
+}
+
+.BagToggle-amount {
+  position: absolute;
+  right: 2.05em; top: calc(50% - .4em);
+
+  width: 1em;
+  height: 1em;
+
+  text-align: center;
+
+  color: #f12;
+}
+
+.BagToggle-amount img {
+  height: 1em;
+}
+
+/* Media queries */
+@media screen and (min-width: 481px) {
+  .BagToggle::before {
+    content: 'My bag'
+  }
+}

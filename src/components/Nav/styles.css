@@ -19,10 +19,9 @@
 }
 
 .Nav-menu,
-.Nav-logo,
-.Nav-bag {
+.Nav-logo {
   position: absolute;
-  top: 0; bottom: 0;
+  top: 0;
   padding: 3.5em 1em;
 
   transition: padding .4s;
@@ -30,29 +29,6 @@
 
 .Nav-menu {
   left: 0;
-}
-
-.Nav-bag {
-  right: 0;
-}
-
-.Nav-bag-img {
-  height: 3em;
-  margin: -1em 0 -1em 1em;
-}
-
-.Nav-bag-amount {
-  position: absolute;
-  right: 2.05em; top: calc(50% - .4em);
-
-  width: 1em;
-  height: 1em;
-
-  color: #f00;
-}
-
-.Nav-bag-amount img {
-  height: 1em;
 }
 
 .Nav-logo {
@@ -81,7 +57,7 @@
 }
 
 .Nav.down .Nav-menu,
-.Nav.down .Nav-bag {
+.Nav.down .BagToggle {
   padding: 1.5em 1em;
 }
 
@@ -91,18 +67,8 @@
 }
 
 /* Media queries */
-@media screen and (min-width: 481px) {
-  .Nav-bag::before {
-    content: 'My bag'
-  }
-}
-
 @media screen and (min-width: 721px) {
   .Nav-menu {
     left: 4em;
-  }
-
-  .Nav-bag {
-    right: 4em;
   }
 }

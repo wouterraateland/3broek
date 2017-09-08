@@ -4,11 +4,10 @@ import './styles.css'
 
 import Nav from 'components/Nav'
 import Footer from 'components/Footer'
-
 import ModalBackground from 'components/ModalBackground'
-import Menu from 'components/Menu'
-import Bag from 'components/Bag'
 
+import Menu from 'pages/Menu'
+import Bag from 'pages/Bag'
 import Home from 'pages/Home'
 import Product from 'pages/Product'
 

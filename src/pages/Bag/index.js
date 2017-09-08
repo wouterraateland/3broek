@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import BagToggle from 'components/BagToggle'
 import Button from 'components/Button'
 import EmptyBag from './EmptyBag'
 import FilledBag from './FilledBag'
@@ -11,7 +12,9 @@ import './styles.css'
 
 const Bag = ({ open, empty, total, onCheckoutClick }) => (
   <div className={`Bag${open ? ' open' : ''}`}>
-    <div className="Bag-header"></div>
+    <div className="Bag-header">
+      <BagToggle />
+    </div>
     <div className="Bag-body">
       {empty
         ? <EmptyBag />

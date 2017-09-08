@@ -1,0 +1,12 @@
+.Select {
+  appearance: none;
+
+  padding: .5em;
+  margin: -.1rem 1rem -.1rem -.1rem;
+  border: .1rem solid;
+  border-radius: .2rem;
+
+  font-weight: normal;
+
+  background: transparent;
+}

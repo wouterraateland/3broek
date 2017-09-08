@@ -19,6 +19,7 @@ const sagaMiddleware = createSagaMiddleware()
 
 let store = createStore(
   rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   applyMiddleware(sagaMiddleware, logger))
 
 window.addEventListener('resize', () => {

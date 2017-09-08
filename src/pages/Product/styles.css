@@ -4,18 +4,53 @@
   right: 0; bottom: 0;
   z-index: 1;
 
+  overflow-x: hidden;
+  overflow-y: auto;
+
   background: #fefdfb;
 }
 
 .ProductPage-header {
   height: 100vmin;
   max-height: 44em;
-}
 
-.ProductPage-header img {
-  display: block;
   padding: 8em 4em 4em;
-  margin: auto;
+
+  text-align: center;
 }
 
-.ProductPage-body {}
+.ProductPage-header-content {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+}
+
+.ProductPage-body {
+  padding: 1em;
+
+  text-align: center;
+}
+
+.ProductPage-name {
+  font-weight: 100;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+.ProductPage-name::after {
+  content: '';
+
+  display: block;
+  width: 3em;
+  height: .2rem;
+  margin: .25em auto 0;
+
+  border-radius: .1rem;
+
+  background-color: #f12;
+}
+
+.ProductPage-price {
+  font-size: 1.5em;
+  margin: 1em 0;
+}

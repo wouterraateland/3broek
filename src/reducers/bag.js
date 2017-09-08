@@ -6,7 +6,7 @@ const bagReducer = (state=initialState, action) => {
     case 'INCREASE_PRODUCT_AMOUNT':
       return {
         ...state,
-        [action.productId]: Math.min((state[action.productId] || 0) + 1, 10)
+        [action.productId]: Math.min((state[action.productId] || 0) + (action.amount || 1), 10)
       }
     case 'DECREASE_PRODUCT_AMOUNT':
       return {
