@@ -1,25 +1,17 @@
 .Home {
   position: relative;
 
-  padding-top: 8em;
+  padding-top: 10em;
 }
 
-.Home-introduction {
-  padding: 1em;
+@media all and (min-width: 481px) {
+  .Home-columns > * > * > * {
+    margin-bottom: 4em;
+  }
 }
 
-.Home-introduction h1 {
-  font-weight: normal;
-  margin-top: 0;
-}
-
-.Home-introduction blockquote {
-    margin: 1em 0;
-    font-style: italic;
-}
-
-@media screen and (min-width: 481px) {
-  .Home-introduction h1 {
-    font-size: 3em;
+@media all and (max-width: 480px) {
+  .Home-columns > * > * {
+    margin-bottom: 4em;
   }
 }

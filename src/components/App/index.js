@@ -2,12 +2,13 @@ import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import './styles.css'
 
-import Nav from 'components/Nav'
-import Footer from 'components/Footer'
 import ModalBackground from 'components/ModalBackground'
 
-import Menu from 'pages/Menu'
-import Bag from 'pages/Bag'
+import Nav from 'templates/Nav'
+import Footer from 'templates/Footer'
+import Menu from 'templates/Menu'
+import Bag from 'templates/Bag'
+
 import Home from 'pages/Home'
 import Product from 'pages/Product'
 

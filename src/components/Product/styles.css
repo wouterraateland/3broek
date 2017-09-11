@@ -3,16 +3,17 @@
   z-index: 1;
 
   display: block;
-  padding: 2rem;
-  margin-bottom: 1rem;
+  padding: 4em;
 
   border-radius: .2rem;
 }
 
 .Product-title {
+  display: block;
+  width: 0;
+
   font-size: 4em;
   font-weight: normal;
-  padding-right: 2em;
 }
 
 .Product-image {
@@ -35,13 +36,13 @@
 }
 
 .Product-price {
-  right: 1rem;
+  right: 1em;
 
   font-size: 2em;
 }
 
 .Product-button {
-  left: 1rem;
+  left: 2em;
 }
 
 .Product:hover .Product-price,

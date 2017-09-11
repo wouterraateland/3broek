@@ -11,9 +11,6 @@
 }
 
 .ProductPage-header {
-  height: 100vmin;
-  max-height: 44em;
-
   padding: 8em 4em 4em;
 
   text-align: center;
@@ -22,7 +19,8 @@
 .ProductPage-header-content {
   position: relative;
   display: inline-block;
-  height: 100%;
+  width: 45vmin;
+  height: 60vmin;
 }
 
 .ProductPage-body {
@@ -47,10 +45,38 @@
 
   border-radius: .1rem;
 
-  background-color: #f12;
+  background-color: #f35e68;
 }
 
 .ProductPage-price {
   font-size: 1.5em;
   margin: 1em 0;
+}
+
+@media all and (max-width: 1080px) {
+}
+
+@media all and (min-width: 1081px) {
+  .ProductPage-header,
+  .ProductPage-body {
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+  }
+
+  .ProductPage-header {
+    left: 0;
+    width: 60%;
+  }
+
+  .ProductPage-body {
+    right: 0;
+    width: 40%;
+  }
 }

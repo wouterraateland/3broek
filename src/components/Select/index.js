@@ -6,7 +6,7 @@ const Select = ({options=[], names=[], onChange, className, ...props}) => (
     onChange={(event) => {
       event.preventDefault()
       if (onChange) {
-        onChange(parseInt(event.target.value))
+        onChange(parseInt(event.target.value, 10))
       }
     }}
     className={`${className ? className : ''} Select`}

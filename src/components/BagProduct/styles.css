@@ -4,7 +4,7 @@
 }
 
 .BagProduct:nth-child(2n) {
-  border-radius: .25rem;
+  border-radius: .2rem;
 
   background-color: #fefdfb;
 }
@@ -17,7 +17,7 @@
   padding: .5em;
   margin-right: 1em;
 
-  border-radius: .25rem;
+  border-radius: .2rem;
 }
 
 .BagProduct-thumbnail img {

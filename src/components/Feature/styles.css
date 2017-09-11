@@ -42,7 +42,7 @@
 
   border-style: solid;
   border-width: 0 1em 1.6em 1em;
-  border-color: transparent transparent #f12 transparent;
+  border-color: transparent transparent #f35e68 transparent;
 }
 
 .Feature-content {
@@ -53,7 +53,7 @@
   display: block;
   width: 16em;
   padding: 1em;
-  border-radius: .25rem;
+  border-radius: .2rem;
 
   background-color: #fefdfb;
 
@@ -67,7 +67,7 @@
 }
 
 .Feature-title {
-  color: #f12;
+  color: #f35e68;
 }
 
 /* Media queries */

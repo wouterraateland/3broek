@@ -1,0 +1,78 @@
+.Bag {
+  position: fixed;
+  top: 0;
+  right: -32em; bottom: 0;
+  z-index: 2;
+
+  width: 32em;
+  max-width: 100vw;
+
+  background: #fff;
+
+  transition: right .4s;
+}
+
+.Bag.open {
+  right: 0;
+}
+
+.Bag-header {
+  position: absolute;
+  left: 0; top: 0;
+  right: 0;
+
+  height: 8em;
+  padding: .5em 3em;
+}
+
+.Bag-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  height: calc(100vh - 11em);
+  padding: 8em 3em 0em;
+}
+
+.Bag-footer {
+  position: relative;
+  height: 11em;
+  padding: 1em 3em 3em;
+}
+
+.Bag-footer::before {
+  content: '';
+
+  position: absolute;
+  top: 0; left: 3em;
+  right: 3em;
+
+  display: block;
+  border-top: .25rem solid #f35e68;
+}
+
+.Bag-footer .Button {
+  width: 100%;
+}
+
+.Bag-empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+  padding: 3rem;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.Bag-empty img {
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+
+  opacity: .2;
+}
+
+.Bag .BagToggle {
+  right: 1.5em;
+}
