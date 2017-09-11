@@ -1,3 +1,15 @@
 .Footer {
-  background-color: #fbf7ea;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: .2rem solid #f35e68;
+}
+
+.Footer-logo {
+  height: 4em;
+  margin: 1.44em 0 1em;
+}
+
+.Footer-link {
+  display: block;
+  margin: 1em 0;
 }

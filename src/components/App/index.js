@@ -11,6 +11,7 @@ import Bag from 'templates/Bag'
 
 import Home from 'pages/Home'
 import Product from 'pages/Product'
+import Privacy from 'pages/Privacy'
 
 const App = () => (
     <BrowserRouter>
@@ -19,8 +20,9 @@ const App = () => (
         <ModalBackground />
         <Menu />
         <Bag />
-        <Route path="/" component={Home} />
+        <Route path="/" exact component={Home} />
         <Route path="/product/:product" component={Product} />
+        <Route path="/privacy" component={Privacy} />
         <Footer />
       </div>
     </BrowserRouter>
