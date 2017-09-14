@@ -8,10 +8,14 @@ import Nav from 'templates/Nav'
 import Footer from 'templates/Footer'
 import Menu from 'templates/Menu'
 import Bag from 'templates/Bag'
+import TempCheckout from 'templates/TempCheckout'
 
-import Home from 'pages/Home'
-import Product from 'pages/Product'
-import Privacy from 'pages/Privacy'
+import AboutPage from 'pages/About'
+import FaqPage from 'pages/Faq'
+import HomePage from 'pages/Home'
+import ProductPage from 'pages/Product'
+import ProductsPage from 'pages/Products'
+import PrivacyPage from 'pages/Privacy'
 
 const App = () => (
     <BrowserRouter>
@@ -20,9 +24,14 @@ const App = () => (
         <ModalBackground />
         <Menu />
         <Bag />
-        <Route path="/" exact component={Home} />
-        <Route path="/product/:product" component={Product} />
-        <Route path="/privacy" component={Privacy} />
+        <TempCheckout />
+        <Route path="/" exact component={HomePage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/faq" component={FaqPage} />
+        <Route path="/privacy" component={PrivacyPage} />
+        <Route path="/products" component={ProductsPage} />
+
+        <Route path="/product/:product" component={ProductPage} />
         <Footer />
       </div>
     </BrowserRouter>

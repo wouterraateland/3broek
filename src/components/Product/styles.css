@@ -8,6 +8,38 @@
   border-radius: .2rem;
 }
 
+.Product.featured::before,
+.Product.featured::after {
+  position: absolute;
+  right: -2.6em; top: 2.4em;
+
+  width: 12em;
+  height: 2em;
+
+  transform: rotate(45deg);
+}
+
+.Product.featured::before {
+  content: '';
+
+  border: 2em solid transparent;
+  border-top-width: 0;
+  border-bottom-color: #f35e68;
+  border-radius: .2rem;
+}
+
+.Product.featured::after {
+  content: 'Featured';
+
+  padding: .5em;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  color: #fff;
+}
+
 .Product-title {
   display: block;
   width: 0;

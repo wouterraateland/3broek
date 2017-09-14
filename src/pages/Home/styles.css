@@ -1,17 +1,3 @@
 .Home {
   position: relative;
-
-  padding-top: 10em;
-}
-
-@media all and (min-width: 481px) {
-  .Home-columns > * > * > * {
-    margin-bottom: 4em;
-  }
-}
-
-@media all and (max-width: 480px) {
-  .Home-columns > * > * {
-    margin-bottom: 4em;
-  }
 }

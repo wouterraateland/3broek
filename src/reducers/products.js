@@ -12,6 +12,7 @@ const initialState = {
       backgroundColor: '#f2f6f8',
       color: '#000',
       price: 29,
+      featured: true
     },
     1: {
       id: 1,

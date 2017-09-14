@@ -7,10 +7,16 @@ body {
 	color: #000;
 }
 
+p {
+	line-height: 1.5;
+}
+
 a {
 	text-decoration: none;
 	color: currentColor;
 }
+
+p a { text-decoration: underline; }
 
 em {
 	color: #f35e68;
@@ -19,6 +25,23 @@ em {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
 }
+
+h1 { font-size: 3em; }
+h1::after {
+	content: '';
+
+	display: block;
+	width: 2em;
+	margin-top: .25em;
+
+	border: .1rem solid #f35e68;
+	border-radius: .1rem;
+}
+.left h1::after { margin: .25em auto 0 0; }
+.center h1::after { margin: .25em auto 0; }
+.right h1::after { margin: .25em 0 0 auto; }
+
+h2 { font-size: 2em; }
 
 ::-webkit-input-placeholder {
   color: rgba(0, 0, 0, .5);
@@ -40,8 +63,8 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
 	width: 100%;
 	max-width: 67.5rem;
-	padding-left: .5rem;
-	padding-right: .5rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 	margin: auto;
 }
 
@@ -162,4 +185,16 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	.hidden-s { display: none; }
+}
+
+@media all and (min-width: 481px) {
+  .Columns > * > * > * {
+    margin-bottom: 4em;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .Columns > * > * {
+    margin-bottom: 4em;
+  }
 }

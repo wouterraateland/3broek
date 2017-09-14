@@ -12,7 +12,7 @@ import Spotlight from 'components/Spotlight'
 const Home = () => (
   <div className="Home wrapper">
     <Columns
-      className="Home-columns"
+      className="Home-columns Columns"
       queries={[
         {
           columns: 1,
@@ -27,7 +27,7 @@ const Home = () => (
       <Spotlight
         image={kick}
         title="Hi there, you!"
-        content="You just found your one and only best fitting pants ever."
+        content="Welcome to a new level of comfort and unrestricted. You just found your one and only best fitting pants ever."
         action={{
           text: "About us",
           to: "/about"
@@ -37,7 +37,7 @@ const Home = () => (
       <Spotlight
         image={mountain}
         title="We love being in beautiful nature"
-        content="And we know that you'll love being nature wearing our pants even more." />
+        content="And we know that you'll love being in nature wearing our pants even more." />
       <Spotlight
         title="Check out all our products"
         content="We've got your favourite for sure."

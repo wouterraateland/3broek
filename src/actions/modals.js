@@ -1,3 +1,8 @@
+export const toggleModal = (modal) => ({
+  type: 'TOGGLE_MODAL',
+  modal
+})
+
 export const toggleBag = () => ({
   type: 'TOGGLE_MODAL',
   modal: 'bag'

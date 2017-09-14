@@ -7,6 +7,7 @@ import EmptyBag from './EmptyBag'
 import FilledBag from './FilledBag'
 
 import { isBagEmpty, getBagTotal } from 'selectors/bag'
+import { toggleModal } from 'actions/modals'
 
 import './styles.css'
 
@@ -41,7 +42,7 @@ const mapStateToProps = (state, props) => ({
 })
 
 const mapDispatchToProps = (dispatch, props) => ({
-  onCheckoutClick: () => dispatch({ type: 'CHECKOUT' })
+  onCheckoutClick: () => dispatch(toggleModal('checkout'))
 })
 
 export default connect(

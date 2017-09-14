@@ -1,0 +1,32 @@
+.TempCheckout {
+  pointer-events: none;
+
+  position: fixed;
+  left: 0; top: 0;
+  bottom: 0; right: 0;
+  z-index: 2;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  width: calc(100vw - 2em);
+  height: calc(100vh - 2em);
+  max-width: 40em;
+  max-height: 30em;
+
+  padding: 1em;
+  margin: auto;
+  border-radius: .2rem;
+
+  background: #fff;
+
+  transition: transform .4s;
+
+  transform: scale(0);
+}
+
+.TempCheckout.open {
+  pointer-events: auto;
+
+  transform: scale(1);
+}

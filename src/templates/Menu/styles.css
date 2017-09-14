@@ -15,3 +15,10 @@
 .Menu.open {
   left: 0;
 }
+
+.Menu-link {
+  display: block;
+  margin: 1em 0;
+
+  font-size: 1.5em;
+}

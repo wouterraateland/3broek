@@ -5,6 +5,8 @@ const productIdSelector = (_, props) => props.productId
 const bagAmountSelector = (_, props) => props.amount
 const productNameURLSelector = (_, props) => props.match.params.product
 
+export const getProductIds = state => state.products.allIds
+
 export const getProductById = createSelector(
   productsSelector,
   productIdSelector,
