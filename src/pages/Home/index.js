@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import './styles.css'
 
 import kick from 'media/kick.jpg'
