@@ -10,7 +10,7 @@ import Product from 'components/Product'
 import Spotlight from 'components/Spotlight'
 
 const layout = ({children, cols}) => (
-  <div className="Home-layout row">
+  <div className="Columns row">
     {Array(2).fill(cols).map((_, i) => (
       <div className="col-6 col-s-12" key={i}>
         {children.filter((_, j) => j % cols === i)}
