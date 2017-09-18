@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import './styles.css'
 
-import { closeModal } from 'actions/modals'
+//import { closeModal } from 'actions/modals'
 
 const TempCheckout = ({ open, onLinkClick }) => (
   <div className={`TempCheckout${open ? ' open' : ''}`}>
@@ -16,6 +16,8 @@ const TempCheckout = ({ open, onLinkClick }) => (
 const mapStateToProps = (state, props) => ({
   open: state.modals.currentModal === 'checkout'
 })
+
+//const mapDispatchToProps = (state, props)
 
 export default connect(
   mapStateToProps,
