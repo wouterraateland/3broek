@@ -186,11 +186,3 @@ h2 { font-size: 2em; }
 
 	.hidden-s { display: none; }
 }
-
-.Columns > * {
-  padding: 2em !important;
-}
-
-.Columns > * > * {
-  margin-bottom: 4em;
-}

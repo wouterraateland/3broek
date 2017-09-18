@@ -6,30 +6,13 @@ import kick from 'media/kick.jpg'
 import mountain from 'media/mountain.jpg'
 import dive from 'media/dive.gif'
 
+import Columns from 'components/Columns'
 import Product from 'components/Product'
 import Spotlight from 'components/Spotlight'
 
-const layout = ({children, cols}) => (
-  <div className="Columns row">
-    {Array(2).fill(cols).map((_, i) => (
-      <div className="col-6 col-s-12" key={i}>
-        {children.filter((_, j) => j % cols === i)}
-      </div>
-    ))}
-  </div>
-)
-
-const mapStateToProps = (state, ownProps) => ({
-  cols: state.window.width > 480 ? 2 : 1
-})
-
-const Layout = connect(
-  mapStateToProps
-)(layout)
-
 const Home = () => (
   <div className="Home wrapper">
-    <Layout>
+    <Columns>
       <Spotlight
         image={kick}
         title="Hi there, you!"
@@ -57,7 +40,7 @@ const Home = () => (
         image={dive}
         title="Enjoy your freedom"
         content="Our pants are created for unrestricted movement and endless comfort. You'll enjoy them, we promise."/>
-    </Layout>
+    </Columns>
   </div>
 )
 
