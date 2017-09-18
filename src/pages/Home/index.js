@@ -1,5 +1,5 @@
 import React from 'react'
-import Columns from 'react-columns'
+import { connect } from 'react-redux'
 import './styles.css'
 
 import kick from 'media/kick.jpg'
@@ -9,21 +9,27 @@ import dive from 'media/dive.gif'
 import Product from 'components/Product'
 import Spotlight from 'components/Spotlight'
 
+const layout = ({children, cols}) => (
+  <div className="Home-layout row">
+    {Array(2).fill(cols).map((_, i) => (
+      <div className="col-6 col-s-12" key={i}>
+        {children.filter((_, j) => j % cols === i)}
+      </div>
+    ))}
+  </div>
+)
+
+const mapStateToProps = (state, ownProps) => ({
+  cols: state.window.width > 480 ? 2 : 1
+})
+
+const Layout = connect(
+  mapStateToProps
+)(layout)
+
 const Home = () => (
   <div className="Home wrapper">
-    <Columns
-      className="Home-columns Columns"
-      queries={[
-        {
-          columns: 1,
-          query: "max-width: 480px"
-        },
-        {
-          columns: 2,
-          query: "min-width: 481px"
-        }
-      ]}
-      gap="2em">
+    <Layout>
       <Spotlight
         image={kick}
         title="Hi there, you!"
@@ -51,7 +57,7 @@ const Home = () => (
         image={dive}
         title="Enjoy your freedom"
         content="Our pants are created for unrestricted movement and endless comfort. You'll enjoy them, we promise."/>
-    </Columns>
+    </Layout>
   </div>
 )
 

@@ -186,15 +186,3 @@ h2 { font-size: 2em; }
 
 	.hidden-s { display: none; }
 }
-
-@media all and (min-width: 481px) {
-  .Columns > * > * > * {
-    margin-bottom: 4em;
-  }
-}
-
-@media all and (max-width: 480px) {
-  .Columns > * > * {
-    margin-bottom: 4em;
-  }
-}
