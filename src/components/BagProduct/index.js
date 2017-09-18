@@ -5,6 +5,7 @@ import './styles.css'
 import { getProductById, getBagProductPriceById } from 'selectors/products'
 import { removeFromBag, increaseAmount, decreaseAmount } from 'actions/products'
 
+import Img from 'components/Img'
 import Button from 'components/Button'
 
 const BagProduct = ({ product, amount, price, onRemoveClick, onIncreaseClick, onDecreaseClick }) => (
@@ -12,7 +13,7 @@ const BagProduct = ({ product, amount, price, onRemoveClick, onIncreaseClick, on
     <div
       className="BagProduct-thumbnail alignleft"
       style={{ backgroundColor: product.backgroundColor }}>
-      <img src={product.image} alt={product.name} />
+      <Img src={product.image} alt={product.name} />
       <div className="BagProduct-remove" onClick={onRemoveClick}>x</div>
     </div>
     <div className="BagProduct-name">{product.name}</div>

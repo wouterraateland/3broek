@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 import { toggleMenu } from 'actions/modals'
 
+import Img from 'components/Img'
 import BagToggle from 'components/BagToggle'
 
 import logo from 'media/driebroek_logo.svg'
@@ -14,7 +15,7 @@ const Nav = ({down, amount, onMenuClick, onBagClick}) => (
     <div onClick={onMenuClick} className="Nav-menu">Menu</div>
 
     <Link to="/" className="Nav-logo">
-      <img src={logo} alt="Driebroek" />
+      <Img src={logo} alt="Driebroek" />
     </Link>
 
     <BagToggle />

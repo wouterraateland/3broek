@@ -4,11 +4,13 @@ import './styles.css'
 
 import logo from 'media/driebroek_logo.svg'
 
+import Img from 'components/Img'
+
 const Footer = () => (
   <div className="Footer wrapper">
     <div className="row">
       <div className="col-6 col-s-12 center-s">
-        <img className="Footer-logo" src={logo} alt="Driebroek logo" />
+        <Img className="Footer-logo" src={logo} alt="Driebroek logo" />
         <p>&copy;2017 Driebroek <Link to="/privacy">Privacy policy</Link></p>
       </div>
       <div className="col-3 col-s-6">

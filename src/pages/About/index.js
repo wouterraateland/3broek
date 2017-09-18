@@ -3,12 +3,13 @@ import './styles.css'
 
 import mountain from 'media/mountain.jpg'
 
+import Img from 'components/Img'
 import Columns from 'components/Columns'
 
 const About = () => (
   <div className="About wrapper">
     <Columns>
-      <img className="About-image" src={mountain} alt="Driebroek" />
+      <Img className="About-image" src={mountain} alt="Driebroek" />
       <div className="About-introduction">
         <h1>About 3broek</h1>
         <h2>Enjoy unrestricted movement and endless comfort.</h2>

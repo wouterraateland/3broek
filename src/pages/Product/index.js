@@ -4,6 +4,7 @@ import './styles.css'
 
 import { getProductByURL } from 'selectors/products'
 
+import Img from 'components/Img'
 import Features from 'components/Features'
 import ProductSelection from 'components/ProductSelection'
 
@@ -11,7 +12,7 @@ const Product = ({ product: { id, backgroundColor, color, image, name, price } }
   <div className="ProductPage">
     <div className="ProductPage-header" style={{ backgroundColor }}>
       <div className="ProductPage-header-content">
-        <img src={image} alt={name} />
+        <Img src={image} alt={name} />
         <Features />
       </div>
     </div>

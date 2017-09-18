@@ -8,13 +8,15 @@ import bag from 'media/bag.svg'
 import { toggleBag } from 'actions/modals'
 import { countBagProducts } from 'selectors/bag'
 
+import Img from 'components/Img'
+
 const BagToggle = ({ amount, onClick }) => (
   <div onClick={onClick} className="BagToggle">
-    <img className="BagToggle-img" src={bag} alt="bag" />
+    <Img className="BagToggle-img" src={bag} alt="bag" />
     <span className="BagToggle-amount">
       {amount
         ? amount
-        : <img src={logo} alt="Driebroek" /> }
+        : <Img src={logo} alt="Driebroek" /> }
     </span>
   </div>
 )

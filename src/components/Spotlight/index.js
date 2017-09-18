@@ -1,6 +1,7 @@
 import React from 'react'
 import './styles.css'
 
+import Img from 'components/Img'
 import Button from 'components/Button'
 
 const Spotlight = ({className, image, title, content, action, ...props}) => (
@@ -9,7 +10,7 @@ const Spotlight = ({className, image, title, content, action, ...props}) => (
     {...props}>
     {image
       ? <div className="Spotlight-header">
-          <img src={image} alt={title} />
+          <Img src={image} alt={title} />
         </div>
       : `` }
     <div className="Spotlight-body row">

@@ -2,10 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { Link } from 'react-router-dom'
+import Img from 'components/Img'
 import Button from 'components/Button'
 
 import { addToBag } from 'actions/products'
-
 import { getProductById } from 'selectors/products'
 
 import './styles.css'
@@ -21,7 +21,7 @@ const Product = ({ product: { backgroundColor, color, name, image, price, featur
       className="Product-button hidden-s"
       text="Add to my bag"
       onClick={onButtonClick} />
-    <img className="Product-image" src={image} alt={name} />
+    <Img className="Product-image" src={image} alt={name} />
   </Link>
 )
 
