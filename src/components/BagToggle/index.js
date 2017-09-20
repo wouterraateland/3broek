@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import './styles.css'
 
-import logo from 'media/driebroek_logo.svg'
+import logo from 'media/3broek_logo.svg'
 import bag from 'media/bag.svg'
 
 import { toggleBag } from 'actions/modals'
@@ -16,7 +16,7 @@ const BagToggle = ({ amount, onClick }) => (
     <span className="BagToggle-amount">
       {amount
         ? amount
-        : <Img src={logo} alt="Driebroek" /> }
+        : <Img src={logo} alt="3broek" /> }
     </span>
   </div>
 )

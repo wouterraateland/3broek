@@ -15,7 +15,7 @@ const Home = () => (
       <Spotlight
         image={kick}
         title="Hi there, you!"
-        content="Welcome to a new level of comfort and unrestricted. You just found your one and only best fitting pants ever."
+        content="Welcome to a new level of comfort and unrestricted movement. You just found your one and only best fitting pants ever."
         action={{
           text: "About us",
           to: "/about"

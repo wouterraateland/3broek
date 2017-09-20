@@ -9,7 +9,7 @@ import Columns from 'components/Columns'
 const About = () => (
   <div className="About wrapper">
     <Columns>
-      <Img className="About-image" src={mountain} alt="Driebroek" />
+      <Img className="About-image" src={mountain} alt="3broek" />
       <div className="About-introduction">
         <h1>About 3broek</h1>
         <h2>Enjoy unrestricted movement and endless comfort.</h2>
