@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
+import ReactGA from 'react-ga'
 import './styles.css'
 
 import ModalBackground from 'components/ModalBackground'
@@ -16,8 +17,15 @@ import ProductPage from 'pages/Product'
 import ProductsPage from 'pages/Products'
 import PrivacyPage from 'pages/Privacy'
 
+ReactGA.initialize('UA-106893242-1')
+
+const logPageView = () => {
+  ReactGA.set({ page: window.location.pathname })
+  ReactGA.pageview(window.location.pathname)
+}
+
 const App = () => (
-    <BrowserRouter>
+    <BrowserRouter onUpdate={logPageView}>
       <div className="App">
         <Nav />
         <ModalBackground />
