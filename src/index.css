@@ -43,6 +43,15 @@ h1::after {
 
 h2 { font-size: 2em; }
 
+input {
+	padding: .5em;
+	margin-right: .5em;
+	border: none;
+	border-bottom: .1rem solid;
+
+	background: transparent;
+}
+
 ::-webkit-input-placeholder {
   color: rgba(0, 0, 0, .5);
 }

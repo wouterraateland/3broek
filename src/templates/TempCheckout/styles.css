@@ -11,8 +11,8 @@
 
   width: calc(100vw - 2em);
   height: calc(100vh - 2em);
-  max-width: 40em;
-  max-height: 30em;
+  max-width: 30em;
+  max-height: 21em;
 
   padding: 1em;
   margin: auto;

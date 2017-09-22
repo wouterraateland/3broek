@@ -6,7 +6,6 @@ import ModalBackground from 'components/ModalBackground'
 
 import Nav from 'templates/Nav'
 import Footer from 'templates/Footer'
-import Menu from 'templates/Menu'
 import Bag from 'templates/Bag'
 import TempCheckout from 'templates/TempCheckout'
 
@@ -22,7 +21,6 @@ const App = () => (
       <div className="App">
         <Nav />
         <ModalBackground />
-        <Menu />
         <Bag />
         <TempCheckout />
         <Route path="/" exact component={HomePage} />

@@ -12,7 +12,7 @@ import './styles.css'
 
 const Nav = ({down, amount, onMenuClick, onBagClick}) => (
   <div className={`Nav${down ? ' down' : ''}`}>
-    <div onClick={onMenuClick} className="Nav-menu">Menu</div>
+    <Link className="Nav-menu" to="/faq">Questions?</Link>
 
     <Link to="/" className="Nav-logo">
       <Img src={logo} alt="3broek" />
