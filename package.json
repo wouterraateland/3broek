@@ -2,7 +2,7 @@
   "name": "3broek",
   "version": "0.1.0",
   "private": false,
-  "homepage": "http://www.driebroek.nl/",
+  "homepage": "https://www.driebroek.nl/",
   "repository": "https://github.com/wouterraateland/driebroek.git",
   "engines": {
     "node": "v8.4.0",

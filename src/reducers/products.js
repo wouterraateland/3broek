@@ -11,8 +11,7 @@ const initialState = {
       image: white,
       backgroundColor: '#f2f6f8',
       color: '#000',
-      price: 29,
-      featured: true
+      price: 34
     },
     1: {
       id: 1,
@@ -20,7 +19,7 @@ const initialState = {
       image: khaki,
       backgroundColor: '#dfe0da',
       color: '#fff',
-      price: 29,
+      price: 34,
     },
     2: {
       id: 2,
@@ -28,15 +27,15 @@ const initialState = {
       image: beige,
       backgroundColor: '#fbf7ea',
       color: '#000',
-      price: 29,
+      price: 34,
     },
     3: {
       id: 3,
-      name: 'Black Swan',
+      name: 'Black Panther',
       image: black,
       backgroundColor: '#6b5861',
       color: '#fff',
-      price: 29,
+      price: 34,
     },
   },
   allIds: [ 0, 1, 2, 3 ]
