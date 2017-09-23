@@ -92,8 +92,18 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
   .Product {
     font-size: .5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Product {
+    padding: 2em;
+  }
+  
+  .Product-title {
+    font-size: 3em;
   }
 }

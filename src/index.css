@@ -46,6 +46,7 @@ h2 { font-size: 2em; }
 input {
 	padding: .5em;
 	margin-right: .5em;
+	margin-bottom: .5em;
 	border: none;
 	border-bottom: .1rem solid;
 
@@ -172,6 +173,11 @@ input {
 }
 
 @media screen and (max-width: 480px) {
+	.wrapper {
+		padding-left: .5em;
+		padding-right: .5em;
+	}
+
 	.col-s-1  { width:   8.33333%; }
 	.col-s-2  { width:  16.66666%; }
 	.col-s-3  { width:  25%;       }

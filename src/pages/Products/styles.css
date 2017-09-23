@@ -2,26 +2,30 @@
   padding-bottom: 20vmin;
 }
 
-.Products-col {
-  margin-bottom: 4em;
-}
-
-.Products-col:nth-child(2n + 1) {
-  padding-right: 1.5em;
-}
-
-.Products-col:nth-child(2n) {
-  padding-left: 1.5em;
-}
-
 .Products-col:nth-child(2n) .Product {
   margin-top: 20vmin;
   margin-bottom: -20vmin;
-  margin-left: .5em;
-  margin-right: -.5em;
 }
 
-.Products-col:nth-child(2n + 1) .Product {
-  margin-left: -.5em;
-  margin-right: .5em;
+@media all and (min-width: 481px) {
+  .Products-col { margin-bottom: 4em; }
+
+  .Products-col:nth-child(2n) { padding-left: 1.5em; }
+  .Products-col:nth-child(2n + 1) { padding-right: 1.5em; }
+
+  .Products-col:nth-child(2n) .Product {
+    margin-left: .5em;
+    margin-right: -.5em;
+  }
+
+  .Products-col:nth-child(2n + 1) .Product {
+    margin-left: -.5em;
+    margin-right: .5em;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .Products-col { margin-bottom: 1em; }
+  .Products-col:nth-child(2n) { padding-left: .5em; }
+  .Products-col:nth-child(2n + 1) { padding-right: .5em; }
 }

@@ -1,7 +1,19 @@
-.Columns > * {
-  padding: 2em !important;
+@media all and (min-width: 481px) {
+  .Columns > * {
+    padding: 2em !important;
+  }
+
+  .Columns > * > * {
+    margin-bottom: 4em;
+  }
 }
 
-.Columns > * > * {
-  margin-bottom: 4em;
+@media all and (max-width: 480px) {
+  .Columns > * {
+    padding: 1em !important;
+  }
+
+  .Columns > * > * {
+    margin-bottom: 2em;
+  }
 }

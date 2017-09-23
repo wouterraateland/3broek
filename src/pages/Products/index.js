@@ -10,8 +10,8 @@ const Products = ({ productIds }) => (
   <div className="Products wrapper">
     <div className="row">
       {productIds.map(productId =>
-        <div className="Products-col col-6">
-          <Product productId={productId} key={productId} />
+        <div className="Products-col col-6" key={productId}>
+          <Product productId={productId} />
         </div>)}
     </div>
   </div>

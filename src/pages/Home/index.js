@@ -20,8 +20,12 @@ const Home = () => (
           text: "About us",
           to: "/about"
         }}/>
-      <Product productId={0} />
-      <Product productId={1} />
+      <div className="Home-product">
+        <Product productId={0} />
+      </div>
+      <div className="Home-product">
+        <Product productId={1} />
+      </div>
       <Spotlight
         image={mountain}
         title="We love being in beautiful nature"
@@ -33,8 +37,12 @@ const Home = () => (
           text: "All Products",
           to: "/products"
         }} />
-      <Product productId={2} />
-      <Product productId={3} />
+      <div className="Home-product">
+        <Product productId={2} />
+      </div>
+      <div className="Home-product">
+        <Product productId={3} />
+      </div>
       <Spotlight
         image={dive}
         title="Enjoy your freedom"
