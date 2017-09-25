@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import { routerReducer } from 'react-router-redux'
 
 import windowReducer from 'reducers/window'
 import productsReducer from 'reducers/products'
@@ -10,6 +11,7 @@ const rootReducer = combineReducers({
   products: productsReducer,
   modals: modalsReducer,
   bag: bagReducer,
+  router: routerReducer,
 })
 
 export default rootReducer

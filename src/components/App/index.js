@@ -1,6 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
-import ReactGA from 'react-ga'
+import { Route } from 'react-router'
 import './styles.css'
 
 import ModalBackground from 'components/ModalBackground'
@@ -17,30 +16,21 @@ import ProductPage from 'pages/Product'
 import ProductsPage from 'pages/Products'
 import PrivacyPage from 'pages/Privacy'
 
-ReactGA.initialize('UA-106893242-1')
-
-const logPageView = () => {
-  ReactGA.set({ page: window.location.pathname })
-  ReactGA.pageview(window.location.pathname)
-}
-
 const App = () => (
-    <BrowserRouter onUpdate={logPageView}>
-      <div className="App">
-        <Nav />
-        <ModalBackground />
-        <Bag />
-        <TempCheckout />
-        <Route path="/" exact component={HomePage} />
-        <Route path="/about" component={AboutPage} />
-        <Route path="/faq" component={FaqPage} />
-        <Route path="/privacy" component={PrivacyPage} />
-        <Route path="/products" component={ProductsPage} />
+  <div className="App">
+    <Nav />
+    <ModalBackground />
+    <Bag />
+    <TempCheckout />
+    <Route path="/" exact component={HomePage} />
+    <Route path="/about" component={AboutPage} />
+    <Route path="/faq" component={FaqPage} />
+    <Route path="/privacy" component={PrivacyPage} />
+    <Route path="/products" component={ProductsPage} />
 
-        <Route path="/product/:product" component={ProductPage} />
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <Route path="/product/:product" component={ProductPage} />
+    <Footer />
+  </div>
 )
 
 export default App
