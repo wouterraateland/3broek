@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { connect } from 'react-redux'
 import './styles.css'
 
@@ -10,6 +11,10 @@ import MCForm from 'components/MCForm'
 
 const Faq = ({ onNewsletterClick }) => (
   <div className="Faq wrapper">
+    <Helmet>
+      <title>Frequently Asked Questions - 3broek</title>
+      <meta property="og:title" content="Frequently Asked Questions - 3broek" />
+    </Helmet>
     <div className="center">
       <h1>Frequently asked questions</h1>
       <h2 className="Faq-tagline">We're glad you asked</h2>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import './styles.css'
 
 import mountain from 'media/mountain.jpg'
@@ -8,6 +9,10 @@ import Columns from 'components/Columns'
 
 const About = () => (
   <div className="About wrapper">
+    <Helmet>
+      <title>About - 3broek</title>
+      <meta property="og:title" content="About - 3broek" />
+    </Helmet>
     <Columns>
       <Img className="About-image" src={mountain} alt="3broek" />
       <div className="About-introduction">

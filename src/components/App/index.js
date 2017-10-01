@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router'
+import { Helmet } from 'react-helmet'
 import './styles.css'
 
 import ModalBackground from 'components/ModalBackground'
@@ -18,6 +19,10 @@ import PrivacyPage from 'pages/Privacy'
 
 const App = () => (
   <div className="App">
+    <Helmet>
+      <title>Home - 3broek</title>
+      <meta name="description" content="Move and chill in the most comfortable pants you ever owned." />
+    </Helmet>
     <Nav />
     <ModalBackground />
     <Bag />

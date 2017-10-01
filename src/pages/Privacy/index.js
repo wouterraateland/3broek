@@ -1,7 +1,12 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const Privacy = () => (
   <div className="Privacy wrapper">
+    <Helmet>
+      <title>Privacy Policy - 3broek</title>
+      <meta property="og:title" content="Privacy Policy - 3broek" />
+    </Helmet>
   	<div id='ppHeader'>driebroek.nl Privacy Policy</div>
   	<div id='ppBody'>
   		<div className='ppConsistencies'>
