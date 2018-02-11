@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import './styles.css'
 
 import { getProductById, getBagProductPriceById } from 'selectors/products'
-import { removeFromBag, increaseAmount, decreaseAmount } from 'actions/products'
+import { removeFromBag, increaseAmount, decreaseAmount } from 'ducks/bag'
 
 import Img from 'components/Img'
 import Button from 'components/Button'

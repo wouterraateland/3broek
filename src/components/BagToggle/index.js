@@ -5,7 +5,7 @@ import './styles.css'
 import logo from 'media/3broek_logo.svg'
 import bag from 'media/bag.svg'
 
-import { toggleBag } from 'actions/modals'
+import { toggleBag } from 'ducks/modals'
 import { countBagProducts } from 'selectors/bag'
 
 import Img from 'components/Img'

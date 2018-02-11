@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import './styles.css'
 
-import { closeModal } from 'actions/modals'
+import { closeModal } from 'ducks/modals'
 
 const Menu = ({ open, onLinkClick }) => (
   <div className={`Menu${open ? ' open' : ''}`}>

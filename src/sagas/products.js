@@ -1,12 +1,12 @@
-import { take, put } from 'redux-saga/effects'
+import { call } from 'redux-saga/effects'
 
-import { toggleBag } from 'actions/modals'
+async function fetchProducts() {
+  
+}
 
 function* products() {
-  while(true) {
-    yield take('ADD_TO_BAG')
-    yield put(toggleBag())
-  }
+  const products = yield call(fetchProducts)
+  console.log(products)
 }
 
 export default products

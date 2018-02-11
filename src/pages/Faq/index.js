@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { connect } from 'react-redux'
 import './styles.css'
 
-import { toggleModal } from 'actions/modals'
+import { toggleModal } from 'ducks/modals'
 
 import Columns from 'components/Columns'
 import Spotlight from 'components/Spotlight'

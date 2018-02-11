@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import './styles.css'
 
-import { closeModal } from 'actions/modals'
+import { closeModal } from 'ducks/modals'
 
 const ModalBackground = ({ open, onClick }) => (
   <div onClick={onClick} className={`ModalBackground${open ? ' open' : ''}`}></div>

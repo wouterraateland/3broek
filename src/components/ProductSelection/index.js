@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import './styles.css'
 
-import { addToBag } from 'actions/products'
+import { addToBag } from 'ducks/bag'
 
 import Select from 'components/Select'
 import Button from 'components/Button'
@@ -22,7 +22,7 @@ const ProductSelection = ({ onAmountChange, onAddClick }) => (
 let selectedAmount = 1
 
 const mapStateToProps = (state, ownProps) => ({
-  
+
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

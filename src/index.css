@@ -7,7 +7,7 @@ body {
 	color: #000;
 }
 
-p {
+p, ul, ol {
 	line-height: 1.5;
 }
 

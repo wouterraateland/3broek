@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import Img from 'components/Img'
 import Button from 'components/Button'
 
-import { addToBag } from 'actions/products'
+import { addToBag } from 'ducks/bag'
 import { getProductById } from 'selectors/products'
 
 import './styles.css'

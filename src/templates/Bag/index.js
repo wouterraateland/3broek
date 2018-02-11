@@ -7,7 +7,7 @@ import EmptyBag from './EmptyBag'
 import FilledBag from './FilledBag'
 
 import { isBagEmpty, getBagTotal } from 'selectors/bag'
-import { toggleModal } from 'actions/modals'
+import { toggleModal } from 'ducks/modals'
 
 import './styles.css'
 

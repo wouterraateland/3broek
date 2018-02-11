@@ -1,8 +1,15 @@
+import { createReducer } from './util'
+
 import black from 'media/pants/black.png'
 import khaki from 'media/pants/khaki.png'
 import beige from 'media/pants/beige.png'
 import white from 'media/pants/white.png'
 
+// Action types
+
+// Action creators
+
+// Reducers
 const initialState = {
   byId: {
     0: {
@@ -45,11 +52,6 @@ const initialState = {
   allIds: [ 0, 1, 2, 3 ]
 }
 
-const productReducer = (state=initialState, action) => {
-  switch (action.type) {
-    default:
-      return state
-  }
-}
+export const reducer = createReducer(initialState, {})
 
-export default productReducer
+export default reducer

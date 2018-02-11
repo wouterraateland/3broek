@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { toggleMenu } from 'actions/modals'
+import { toggleMenu } from 'ducks/modals'
 
 import Img from 'components/Img'
 import BagToggle from 'components/BagToggle'
