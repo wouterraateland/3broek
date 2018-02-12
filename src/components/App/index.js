@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route } from 'react-router'
+import { Route, Switch } from 'react-router'
 import { Helmet } from 'react-helmet'
 import './styles.css'
 
@@ -16,6 +16,7 @@ import HomePage from 'pages/Home'
 import ProductPage from 'pages/Product'
 import ProductsPage from 'pages/Products'
 import PrivacyPage from 'pages/Privacy'
+import NotFoundPage from 'pages/404'
 
 const App = () => (
   <div className="App">
@@ -27,13 +28,16 @@ const App = () => (
     <ModalBackground />
     <Bag />
     <TempCheckout />
-    <Route path="/" exact component={HomePage} />
-    <Route path="/about" component={AboutPage} />
-    <Route path="/faq" component={FaqPage} />
-    <Route path="/privacy" component={PrivacyPage} />
-    <Route path="/products" component={ProductsPage} />
+    <Switch>
+      <Route path="/" exact component={HomePage} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/faq" component={FaqPage} />
+      <Route path="/privacy" component={PrivacyPage} />
+      <Route path="/products" component={ProductsPage} />
 
-    <Route path="/product/:product" component={ProductPage} />
+      <Route path="/product/:product" component={ProductPage} />
+      <Route component={NotFoundPage} />
+    </Switch>
     <Footer />
   </div>
 )

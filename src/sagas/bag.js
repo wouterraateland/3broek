@@ -6,7 +6,6 @@ import * as Bag from 'ducks/bag'
 import * as Modals from 'ducks/modals'
 
 import { getBagProducts } from 'selectors/bag'
-import { getProductById } from 'selectors/products'
 
 function* toggleBag() {
   yield put(Modals.toggleBag())

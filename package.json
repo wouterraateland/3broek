@@ -1,12 +1,11 @@
 {
   "name": "3broek",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "homepage": "https://www.driebroek.nl/",
-  "repository": "https://github.com/wouterraateland/driebroek.git",
-  "engines": {
-    "node": "v8.4.0",
-    "npm": "5.4.2"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wouterraateland/3broek.git"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -27,12 +26,18 @@
   "devDependencies": {
     "enzyme": "^2.9.1",
     "react-scripts": "1.0.10",
+    "react-snap": "^1.11.3",
     "react-test-renderer": "^15.6.2"
   },
   "scripts": {
+    "deploy": "npm run build && firebase deploy",
+    "serve": "firebase serve",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-snap",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "reactSnap": {
+    "enableLogging": true
   }
 }
