@@ -1,5 +1,7 @@
 import { createSelector } from 'reselect'
 
+import { getById } from 'selectors/products'
+
 const bagProductsSelector = state => state.bag
 const productsSelector = state => state.products.byId
 const productIdsSelector = state => state.products.allIds
@@ -19,10 +21,11 @@ export const isBagEmpty = createSelector(
 )
 
 export const getBagProducts = createSelector(
-  bagProductsSelector,
-  productAmounts => Object.keys(productAmounts)
+  [getById, bagProductsSelector],
+  (products, productAmounts) => Object.keys(productAmounts)
     .map(productId => ({
       productId,
+      product: products[productId],
       amount: productAmounts[productId]
     }))
     .filter(product => product.amount > 0)

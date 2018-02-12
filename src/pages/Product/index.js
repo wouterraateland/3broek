@@ -33,8 +33,7 @@ const LoadedProduct = ({ product: { id, backgroundColor, color, image, name, des
       <div className="ProductPage-price">€{price}</div>
       <ProductSelection productId={id} />
       <div className="ProductPage-info">
-        <p>One-size fits all</p>
-        <p><em>Free shipping in the Netherlands</em></p>
+        <p><em>One-size fits all</em></p>
       </div>
     </div>
   </div>

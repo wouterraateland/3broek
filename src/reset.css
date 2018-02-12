@@ -153,6 +153,7 @@ input[type="submit"] {
 }
 
 button[disabled],
+select[disabled],
 html input[disabled] {
 	cursor: default;
 	opacity: .5;

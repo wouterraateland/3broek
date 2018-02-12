@@ -21,13 +21,17 @@ const Faq = ({ onNewsletterClick }) => (
     </div>
     <Columns>
       <div className="Faq-question">
-        <h2>How long until 3broek is ready for sale?</h2>
-        <p>3broek launches the first of November. Want to be the first to know? Like our <a href="https://www.facebook.com/3broek-117920655543856/" target="_blank" rel="noopener noreferrer">facebook page</a> or subscribe to our newsletter:</p>
+        <h2>How can I stay in touch with 3broek?</h2>
+        <p>You can follow our <a href="https://www.facebook.com/3broek-117920655543856/" target="_blank" rel="noopener noreferrer">facebook page</a> or subscribe to our newsletter:</p>
         <MCForm />
       </div>
       <div className="Faq-question">
         <h2>Can I wash my 3broek?</h2>
         <p>Oh yes, you can. We recommend using a regular washing machine at 40&deg;C. The first time you wash, the color might fade a little bit.</p>
+      </div>
+      <div className="Faq-question">
+        <h2>Does "one-size fits all" fit me?</h2>
+        <p>Probably, yes. The upper board stretches from 76 to 100cm.</p>
       </div>
       <div className="Faq-question">
         <h2>How long is the delivery time?</h2>
@@ -38,8 +42,8 @@ const Faq = ({ onNewsletterClick }) => (
         <p>At the moment we accept payment via iDEAL, Credit card and Paypal.</p>
       </div>
       <div className="Faq-question">
-        <h2>Does "one-size fits all" fit me?</h2>
-        <p>Probably, yes. The upper board stretches from 76 to 100cm.</p>
+        <h2>How much is the shipping cost?</h2>
+        <p>Shipping costs €5.</p>
       </div>
       <div className="Faq-question">
         <h2>Can I buy more than 10 pants at one time?</h2>

@@ -17,8 +17,7 @@ export const getProducts = createSelector(
 )
 
 export const getProductById = createSelector(
-  getById,
-  getProductId,
+  [getById, getProductId],
   (products, productId) => products[productId]
 )
 
@@ -26,6 +25,11 @@ export const getBagProductPriceById = createSelector(
   getProductById,
   bagAmountSelector,
   ({ price }, amount) => price * amount
+)
+
+export const getProductAvailabiliy = createSelector(
+  getProductById,
+  product => product.available
 )
 
 export const getProductByURL = createSelector(

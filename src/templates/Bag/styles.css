@@ -30,13 +30,13 @@
   overflow-x: hidden;
   overflow-y: auto;
 
-  height: calc(100% - 11em);
+  height: calc(100% - 8em);
   padding: 8em 3em 0em;
 }
 
 .Bag-footer {
   position: relative;
-  height: 11em;
+  height: 8em;
   padding: 1em 3em 3em;
 }
 

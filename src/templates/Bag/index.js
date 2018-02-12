@@ -7,7 +7,7 @@ import EmptyBag from './EmptyBag'
 import FilledBag from './FilledBag'
 
 import { isBagEmpty, getBagTotal } from 'selectors/bag'
-import { toggleModal } from 'ducks/modals'
+import { checkout } from 'ducks/bag'
 
 import './styles.css'
 
@@ -22,10 +22,10 @@ const Bag = ({ open, empty, total, onCheckoutClick }) => (
         : <FilledBag />}
     </div>
     <div className="Bag-footer">
-      <p className="row">
+      {/* <p className="row">
         <span className="alignleft">Shipping</span>
         <strong className="alignright">Free</strong>
-      </p>
+      </p> */}
       <p className="row">
         <span className="alignleft">Total cost</span>
         <strong className="alignright">&euro;{total}</strong>
@@ -42,7 +42,7 @@ const mapStateToProps = (state, props) => ({
 })
 
 const mapDispatchToProps = (dispatch, props) => ({
-  onCheckoutClick: () => dispatch(toggleModal('checkout'))
+  onCheckoutClick: () => dispatch(checkout())
 })
 
 export default connect(
