@@ -9,10 +9,10 @@ import Img from 'components/Img'
 import Features from 'components/Features'
 import ProductSelection from 'components/ProductSelection'
 
-const Product = ({ product: { id, backgroundColor, color, image, name, description, price } }) => (
+const LoadedProduct = ({ product: { id, backgroundColor, color, image, name, description, price } }) => (
   <div className="ProductPage">
     <Helmet>
-      <title>{name} - 3broek</title>
+      <title>{`${name} - 3broek`}</title>
       <meta property="og:title" content={`${name} - 3broek`} />
       <meta name="description" content={description} />
       <meta property="og:description" content={description} />
@@ -39,6 +39,10 @@ const Product = ({ product: { id, backgroundColor, color, image, name, descripti
     </div>
   </div>
 )
+
+const Product = ({ product }) => product
+  ? <LoadedProduct product={product} />
+  : null
 
 const mapStateToProps = (state, ownProps) => ({
   product: getProductByURL(state, ownProps),

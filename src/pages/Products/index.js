@@ -5,7 +5,7 @@ import './styles.css'
 
 import Product from 'components/Product'
 
-import { getProductIds } from 'selectors/products'
+import { getAllIds } from 'selectors/products'
 
 const Products = ({ productIds }) => (
   <div className="Products wrapper">
@@ -23,7 +23,7 @@ const Products = ({ productIds }) => (
 )
 
 const mapStateToProps = (state, ownProps) => ({
-  productIds: getProductIds(state),
+  productIds: getAllIds(state),
 })
 
 export default connect(

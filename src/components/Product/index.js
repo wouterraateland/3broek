@@ -10,7 +10,7 @@ import { getProductById } from 'selectors/products'
 
 import './styles.css'
 
-const Product = ({ product: { backgroundColor, color, name, image, price, featured }, onButtonClick }) => (
+const VisibleProduct = ({ product: { backgroundColor, color, name, image, price, featured }, onButtonClick }) => (
   <Link
     to={`/product/${name.replace(/ /g, '').toLowerCase()}`}
     className={`Product${featured ? ` featured` : ``}`}
@@ -24,6 +24,13 @@ const Product = ({ product: { backgroundColor, color, name, image, price, featur
     <Img className="Product-image" src={image} alt={name} />
   </Link>
 )
+
+const Product = ({ product, onButtonClick}) => product
+  ? <VisibleProduct
+      product={product}
+      onButtonClick={onButtonClick}
+    />
+  : null
 
 const mapStateToProps = (state, props) => ({
   product: getProductById(state, props)

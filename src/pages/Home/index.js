@@ -1,5 +1,8 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import './styles.css'
+
+import { getAllIds } from 'selectors/products'
 
 import kick from 'media/kick.jpg'
 import mountain from 'media/mountain.jpg'
@@ -9,7 +12,7 @@ import Columns from 'components/Columns'
 import Product from 'components/Product'
 import Spotlight from 'components/Spotlight'
 
-const Home = () => (
+const Home = ({ productIds }) => (
   <div className="Home wrapper">
     <Columns>
       <Spotlight
@@ -21,10 +24,10 @@ const Home = () => (
           to: "/about"
         }}/>
       <div className="Home-product">
-        <Product productId={0} />
+        <Product productId={productIds[0]} />
       </div>
       <div className="Home-product">
-        <Product productId={1} />
+        <Product productId={productIds[1]} />
       </div>
       <Spotlight
         image={mountain}
@@ -38,10 +41,10 @@ const Home = () => (
           to: "/products"
         }} />
       <div className="Home-product">
-        <Product productId={2} />
+        <Product productId={productIds[2]} />
       </div>
       <div className="Home-product">
-        <Product productId={3} />
+        <Product productId={productIds[3]} />
       </div>
       <Spotlight
         image={dive}
@@ -51,4 +54,10 @@ const Home = () => (
   </div>
 )
 
-export default Home
+const mapStateToProps = (state) => ({
+  productIds: getAllIds(state),
+})
+
+export default connect(
+  mapStateToProps
+)(Home)

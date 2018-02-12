@@ -13,9 +13,8 @@
   transition-duration: .4s;
 }
 
-.Nav img {
-  max-width: none;
-  max-height: none;
+.Nav svg {
+  stroke: currentColor;
 }
 
 .Nav-menu,
@@ -39,7 +38,7 @@
   margin: auto;
 }
 
-.Nav-logo img {
+.Nav-logo svg {
   height: 5em;
   margin: -2em;
 
@@ -57,7 +56,7 @@
   padding: 1.5em 1em;
 }
 
-.Nav.down .Nav-logo img {
+.Nav.down .Nav-logo svg {
   height: 3em;
   margin: -3em;
 }

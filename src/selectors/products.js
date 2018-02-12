@@ -1,15 +1,24 @@
 import { createSelector } from 'reselect'
 
-const productsSelector = state => state.products.byId
-const productIdSelector = (_, props) => props.productId
+export const getById = state => state.products.byId
+export const getAllIds = state => state.products.allIds
+const getProductId = (_, props) => props.productId
 const bagAmountSelector = (_, props) => props.amount
-const productNameURLSelector = (_, props) => props.match.params.product
+const productNameURLSelector = state => {
+  const pathname = state.router.location.pathname
+  const regex = /\/product\/(.*)/g
+  const res = regex.exec(pathname)
+  return res ? res[1] : null
+}
 
-export const getProductIds = state => state.products.allIds
+export const getProducts = createSelector(
+  [getById, getAllIds],
+  (products, ids) => ids.map(id => products[id])
+)
 
 export const getProductById = createSelector(
-  productsSelector,
-  productIdSelector,
+  getById,
+  getProductId,
   (products, productId) => products[productId]
 )
 
@@ -19,18 +28,17 @@ export const getBagProductPriceById = createSelector(
   ({ price }, amount) => price * amount
 )
 
-export const getProductIdByURL = createSelector(
+export const getProductByURL = createSelector(
   productNameURLSelector,
-  productsSelector,
-  (name, products) => Object.keys(products)
-    .find(
-      productId => products[productId].name.replace(/ /g, '').toLowerCase()
-        === name.toLowerCase()
-    )
+  getProducts,
+  (name, products) => name && products.find(
+    product => product.name.replace(/ /g, '').toLowerCase() === name.toLowerCase()
+  )
 )
 
-export const getProductByURL = createSelector(
-  getProductIdByURL,
-  productsSelector,
-  (productId, products) => ({ productId, ...products[productId] })
+export const getCurrentColor = createSelector(
+  getProductByURL,
+  (product) => {
+    return product ? product.color : '#000'
+  }
 )

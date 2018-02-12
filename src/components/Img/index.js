@@ -1,44 +1,93 @@
 import React, { Component } from 'react'
+import classNames from 'classnames'
 import './styles.css'
+
+const Status = {
+  PENDING: 'pending',
+  LOADING: 'loading',
+  LOADED: 'loaded',
+  FAILED: 'failed',
+}
 
 class Img extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      img: null,
-      loaded: false
+      status: props.src
+        ? Status.LOADING
+        : Status.PENDING
     }
-  }
-
-  onImageLoad() {
-    this.setState({ loaded: true })
+    this.img = null
   }
 
   componentDidMount() {
-    const img = new Image()
-    this.setState({ img })
-    img.onload = this.onImageLoad.bind(this)
-    img.src = this.props.src
-  }
-
-  componentWillUnmount() {
-    if (this.state.img) {
-      this.setState({ img: { onload: null } })
+    if (this.state.status === Status.LOADING) {
+      this.load()
     }
   }
 
-  render() {
-    const { loaded } = this.state
-    const { src, alt, className, ...props } = this.props
+  componentWillReceiveProps(nextProps) {
+    if (this.props.src !== nextProps.src) {
+      this.setState({
+        status: nextProps.src ? Status.LOADING : Status.PENDING,
+      })
+    }
+  }
 
-    return (
-      <img
-        className={`Img${loaded ? ` loaded` : ``}${className ? ` ${className}`: ``}`}
-        src={src}
-        alt={alt}
-        {...props} />
-    )
+  componentDidUpdate() {
+    if (this.state.status === Status.LOADING && !this.img) {
+      this.load()
+    }
+  }
+
+  componentWillUnMount() {
+    this.destroyLoader()
+  }
+
+  load() {
+    this.destroyLoader()
+
+    this.img = new Image()
+    this.img.onload = this.handleLoad.bind(this)
+    this.img.onerror = this.handleError.bind(this)
+    this.img.src = this.props.src
+  }
+
+  destroyLoader() {
+    if (this.img) {
+      this.img.onload = null
+      this.img.onerror = null
+      this.img = null
+    }
+  }
+
+  handleLoad() {
+    this.setState({ status: Status.LOADED })
+  }
+
+  handleError() {
+    this.setState({ status: Status.FAILED })
+  }
+
+  render() {
+    const { status } = this.state
+    const { src, alt, className, ...props } = this.props
+    const cx = classNames('Img', status, className)
+
+    switch (status) {
+      case Status.LOADED:
+        return (
+          <img
+            className={cx}
+            src={this.img.src}
+            alt={alt}
+            {...props}
+          />
+        )
+      default:
+        return <span className={cx} />
+    }
   }
 }
 

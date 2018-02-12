@@ -58,6 +58,10 @@
   filter: drop-shadow(.25em .5em .5em rgba(0, 0, 0, .2));
 }
 
+.Product-image.loading {
+  padding: 74% 0;
+}
+
 .Product-price,
 .Product-button {
   position: absolute;
@@ -102,7 +106,7 @@
   .Product {
     padding: 2em;
   }
-  
+
   .Product-title {
     font-size: 3em;
   }

@@ -32,8 +32,14 @@
 }
 
 /* Media queries */
-@media screen and (min-width: 481px) {
+@media all and (min-width: 481px) {
   .BagToggle::before {
     content: 'My bag'
+  }
+}
+
+@media all and (min-width: 1081px) {
+  .BagToggle {
+    color: #000;
   }
 }
