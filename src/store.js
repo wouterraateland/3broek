@@ -21,6 +21,7 @@ const configureStore = (initialState, history) => {
 
   let store = createStore(
     reducer,
+    initialState,
     enhancers
   )
 

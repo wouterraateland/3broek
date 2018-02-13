@@ -34,17 +34,16 @@ async function fetchProducts() {
 
 function* products() {
   const fetchedProducts = yield call(fetchProducts)
-  const original = fetchedProducts.find(product => product.title === '3broek Original')
 
-  const products = original.variants.map(variant => ({
-    id: variant.id,
-    name: variant.title,
-    description: original.description,
-    image: variant.image.src,
-    price: variant.price,
-    available: variant.available,
+  const products = fetchedProducts.map(product => ({
+    id: product.variants[0].id,
+    name: product.title,
+    description: product.description,
+    image: product.images[0].src,
+    price: product.variants[0].price,
+    available: product.variants[0].available,
     featured: false,
-    ...productColors[variant.title],
+    ...productColors[product.title],
   }))
 
   yield put(Products.loadSuccess(products))
